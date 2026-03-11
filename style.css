@@ -30,7 +30,7 @@
 html,
 body {
   height: 100%;
-  font-family: "Segoe UI", system-ui, sans-serif;
+  font-family: "Space Grotesk", "Segoe UI", system-ui, sans-serif;
   background: var(--bg);
   color: var(--text);
 }
@@ -374,6 +374,18 @@ body {
 
 .profile-name span.accent {
   color: var(--accent);
+  animation: blink 1s step-end infinite;
+}
+
+@keyframes blink {
+  0%,
+  50% {
+    opacity: 1;
+  }
+  51%,
+  100% {
+    opacity: 0;
+  }
 }
 
 .profile-tagline {

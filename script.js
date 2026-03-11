@@ -39,7 +39,10 @@ function loadProfile() {
   const profileBadges = document.getElementById("profile-badges");
 
   if (profileAvatar && bio.avatar) profileAvatar.textContent = bio.avatar;
-  if (profileName) profileName.textContent = bio.name;
+  if (profileName) {
+    profileName.textContent = "";
+    typeWriter(profileName, bio.name, 80);
+  }
   if (profileTagline) profileTagline.textContent = bio.tagline;
   if (profileBadges) profileBadges.innerHTML = generateBadgesHTML(bio.badges);
 }
@@ -51,6 +54,24 @@ function generateBadgesHTML(badges, inline = false) {
       return `<span class="badge"><span class="dot" style="${colorStyle}"></span>${badge.name}</span>`;
     })
     .join("");
+}
+
+// ============================================
+// Typewriter Effect
+// ============================================
+function typeWriter(element, text, speed = 100) {
+  let i = 0;
+  element.textContent = "";
+
+  function type() {
+    if (i < text.length) {
+      element.textContent += text.charAt(i);
+      i++;
+      setTimeout(type, speed);
+    }
+  }
+
+  type();
 }
 
 // ============================================
