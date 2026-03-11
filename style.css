@@ -426,14 +426,17 @@ body {
 .profile-nav.sticky {
   position: fixed;
   top: 0;
-  left: 0;
-  right: 0;
-  background: var(--glass-bg);
-  backdrop-filter: var(--glass-blur);
-  -webkit-backdrop-filter: var(--glass-blur);
-  border-bottom: 1px solid var(--glass-border);
-  box-shadow: var(--glass-shadow);
-  padding: 10px 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  max-width: 800px;
+  background: rgba(11, 26, 43, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(30, 58, 85, 0.6);
+  border-radius: 0 0 12px 12px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.4);
+  padding: 12px 0;
   margin-top: 0;
   z-index: 1000;
   justify-content: center;
