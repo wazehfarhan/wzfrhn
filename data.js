@@ -131,10 +131,8 @@ const posts = [
     slug: "y-sorting-in-2d-games",
     date: "Dec 04, 2025",
     title: "Y-Sorting in 2D Games",
-    excerpt:
-      'In the 3D world, the graphics card uses a "Depth Buffer" (Z-buffer) to calculate which pixel is closest to the camera. In 2D games (like Stardew Valley, Zelda: A Link to the Past, or Among Us), we don\'t have a Z-buffer. We are painting on a flat canvas.',
-    content:
-      'To create the illusion of depth, we use the <span class="kw">Painter\'s Algorithm</span>: We paint the furthest objects first, and the closest objects last. But how do we know what is "closer"?',
+    excerpt: 'In the 3D world, the graphics card uses a "Depth Buffer" (Z-buffer) to calculate which pixel is closest to the camera...',
+    content: 'To create the illusion of depth, we use the <span class="kw">Painter\'s Algorithm</span>...',
     tags: ["Game Dev", "2D Rendering", "Algorithms", "Graphics"],
     hasDemo: true,
   },
@@ -143,10 +141,8 @@ const posts = [
     slug: "real-time-multiplayer-with-socket-io",
     date: "Nov 18, 2025",
     title: "Real-time Multiplayer with Socket.IO",
-    excerpt:
-      "Building real-time applications requires a solid understanding of WebSockets. Socket.IO abstracts the complexity and gives you rooms, namespaces, and automatic reconnection out of the box.",
-    content:
-      'In this post, we dive deep into scaling Socket.IO with <span class="kw">ScyllaDB</span> as a distributed session store — handling millions of concurrent connections with low latency.',
+    excerpt: "Building real-time applications requires a solid understanding of WebSockets...",
+    content: 'In this post, we dive deep into scaling Socket.IO with <span class="kw">ScyllaDB</span>...',
     tags: ["Socket.IO", "Real-time", "ScyllaDB", "Backend"],
     hasDemo: false,
   },
@@ -155,10 +151,8 @@ const posts = [
     slug: "building-a-custom-react-renderer",
     date: "Oct 22, 2025",
     title: "Building a Custom React Renderer",
-    excerpt:
-      "React's reconciliation algorithm is fascinating. But have you ever wondered if you could render to something other than the DOM?",
-    content:
-      "In this tutorial, we'll build a custom renderer that outputs React components to ASCII art in the terminal. We'll explore how React's render method works under the hood.",
+    excerpt: "React's reconciliation algorithm is fascinating...",
+    content: "In this tutorial, we'll build a custom renderer that outputs React components to ASCII art...",
     tags: ["React", "JavaScript", "Rendering", "Open Source"],
     hasDemo: false,
   },
@@ -167,11 +161,19 @@ const posts = [
     slug: "understanding-crdts-for-distributed-systems",
     date: "Sep 15, 2025",
     title: "Understanding CRDTs for Distributed Systems",
-    excerpt:
-      "Conflict-free Replicated Data Types (CRDTs) are the secret sauce behind modern collaborative applications like Figma and Google Docs.",
-    content:
-      "We'll dive deep into G-Counters, PN-Counters, and the fascinating world of eventually consistent data structures that don't require a central coordinator.",
+    excerpt: "Conflict-free Replicated Data Types (CRDTs) are the secret sauce...",
+    content: "We'll dive deep into G-Counters, PN-Counters...",
     tags: ["Distributed Systems", "CRDT", "Backend", "Architecture"],
     hasDemo: true,
+  },
+  {
+    id: 5,
+    slug: "how-to-share-localhost-with-cloudflare-tunnel",
+    date: "Jan 20, 2026",
+    title: "How to Share Your Localhost with the Internet Using Cloudflare Tunnel (Mac, Windows, and Linux)",
+    excerpt: "When building a website or web application locally, it usually runs on localhost, which means only your computer can access it. However, sometimes developers need to share their work with teammates, clients, or testers. A reliable solution is Cloudflare Tunnel, a secure tool that allows you to expose your local server to the internet without opening ports or configuring your router.",
+    content: "This guide explains how to set up Cloudflare Tunnel on macOS, Windows, and Linux...",
+    tags: ["Cloudflare", "DevOps", "Networking", "Tutorial", "Localhost"],
+    hasDemo: false,
   },
 ];

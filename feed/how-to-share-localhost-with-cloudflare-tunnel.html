@@ -1,0 +1,312 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>W2ZFRHN</title>
+    <link rel="stylesheet" href="../style.css" />
+    <link rel="stylesheet" href="post-style.css" />
+  </head>
+  <body>
+    <div class="layout">
+      <main class="main">
+        <div class="profile-header">
+          <div class="profile-avatar">👨‍💻</div>
+          <div class="profile-info">
+            <h1 class="profile-name">
+              <span>Kazi Md. Wazeh Ullah Farhan</span
+              ><span class="accent">_</span>
+            </h1>
+            <p class="profile-tagline">
+              Software Engineering 💻 • Full-Stack Web Development • AI/ML
+              Enthusiast
+            </p>
+            <div class="profile-badges">
+              <span class="badge"
+                ><span class="dot" style="background: #a8b9cc"></span>C</span
+              >
+              <span class="badge"
+                ><span class="dot" style="background: #00599c"></span>C++</span
+              >
+              <span class="badge"
+                ><span class="dot" style="background: #ed8b00"></span>Java</span
+              >
+              <span class="badge"
+                ><span class="dot" style="background: #512bd4"></span>C#</span
+              >
+              <span class="badge"
+                ><span class="dot" style="background: #f7df1e"></span
+                >JavaScript</span
+              >
+              <span class="badge"
+                ><span class="dot" style="background: #336791"></span>SQL</span
+              >
+              <span class="badge"
+                ><span class="dot" style="background: #ff9900"></span>AWS</span
+              >
+            </div>
+            <nav class="profile-nav" id="profileNav">
+              <a href="../index.html#tab-feed" class="nav-item active">Feed</a>
+              <a href="../index.html#about" class="nav-item">About</a>
+              <a href="../index.html#projects" class="nav-item">Projects</a>
+              <a href="../index.html#resume" class="nav-item">Resume</a>
+            </nav>
+          </div>
+        </div>
+
+        <section id="tab-feed" class="tab-content">
+          <article class="fc">
+            <div class="fm">
+              <div class="fa">👨‍💻</div>
+              <div>
+                <span class="fan">Kazi Md. Wazeh Ullah Farhan</span>
+                <span class="fad">Jan 20, 2026</span>
+              </div>
+            </div>
+            <div class="ft">
+              How to Share Your Localhost with the Internet Using Cloudflare
+              Tunnel (Mac, Windows, and Linux)
+            </div>
+            <div class="fb">
+              <p>
+                When building a website or web application locally, it usually
+                runs on <span class="kw">localhost</span>, which means only your
+                computer can access it. However, sometimes developers need to
+                share their work with teammates, clients, or testers.
+              </p>
+              <p>
+                A reliable solution is
+                <span class="kw">Cloudflare Tunnel</span>, a secure tool that
+                allows you to expose your local server to the internet without
+                opening ports or configuring your router.
+              </p>
+              <p>
+                This guide explains how to set up Cloudflare Tunnel on macOS,
+                Windows, and Linux.
+              </p>
+
+              <h2>What is Cloudflare Tunnel?</h2>
+              <p>
+                Cloudflare Tunnel creates a secure connection between your local
+                computer and Cloudflare's global network. Instead of exposing
+                your public IP address, traffic goes through Cloudflare's
+                infrastructure.
+              </p>
+              <p><strong>Key advantages:</strong></p>
+              <ul>
+                <li>No port forwarding required</li>
+                <li>Automatic HTTPS security</li>
+                <li>Works behind NAT and firewalls</li>
+                <li>Easy setup for developers</li>
+                <li>Temporary public URLs for testing</li>
+              </ul>
+
+              <h2>Step 1: Install Cloudflare Tunnel</h2>
+              <p>
+                Cloudflare Tunnel runs through a CLI tool called
+                <span class="kw">cloudflared</span>.
+              </p>
+
+              <h3>Install on macOS</h3>
+              <p>Using Homebrew:</p>
+              <pre><code>brew install cloudflared</code></pre>
+              <p>Verify installation:</p>
+              <pre><code>cloudflared --version</code></pre>
+
+              <h3>Install on Windows</h3>
+              <p>
+                Download the <code>cloudflared.exe</code> file from Cloudflare's
+                official site. Move it to a folder such as
+                <code>C:\cloudflared</code>. Open Command Prompt or PowerShell
+                and run:
+              </p>
+              <pre><code>cloudflared --version</code></pre>
+
+              <h3>Install on Linux</h3>
+              <p>
+                On most Linux distributions you can install using
+                <code>apt</code>:
+              </p>
+              <pre><code>sudo apt update
+sudo apt install cloudflared</code></pre>
+              <p>Check installation:</p>
+              <pre><code>cloudflared --version</code></pre>
+
+              <h2>Step 2: Authenticate with Cloudflare</h2>
+              <p>
+                After installation, connect the CLI with your Cloudflare
+                account.
+              </p>
+              <p>Run:</p>
+              <pre><code>cloudflared tunnel login</code></pre>
+              <p>
+                Your browser will open and ask you to log in to Cloudflare. Once
+                approved, authentication credentials will be stored on your
+                computer.
+              </p>
+
+              <h2>Step 3: Start Your Local Web Server</h2>
+              <p>
+                Before creating a tunnel, your local application must be
+                running.
+              </p>
+              <p>Example using Python:</p>
+              <pre><code>python -m http.server 8000</code></pre>
+              <p>Now your site will be available locally at:</p>
+              <pre><code>http://localhost:8000</code></pre>
+              <p>
+                You can also use other servers like Node.js development server,
+                PHP built-in server, or static HTML servers.
+              </p>
+
+              <h2>Step 4: Create a Public Tunnel</h2>
+              <p>Open another terminal window and run:</p>
+              <pre><code>cloudflared tunnel --url http://localhost:8000</code></pre>
+              <p>
+                Cloudflare will generate a public URL such as:
+                <code>https://example-name.trycloudflare.com</code>
+              </p>
+              <p>Anyone with this link can now access your local website.</p>
+
+              <h2>How the Connection Works</h2>
+              <p>The traffic flow looks like this:</p>
+              <pre><code>Internet User
+      ↓
+Cloudflare Global Network
+      ↓
+Secure Cloudflare Tunnel
+      ↓
+Your Localhost Server</code></pre>
+              <p>
+                This method is secure because your computer makes an outbound
+                connection to Cloudflare instead of exposing inbound ports.
+              </p>
+
+              <h2>Common Use Cases</h2>
+              <p>Developers commonly use Cloudflare Tunnel for:</p>
+              <ul>
+                <li>Sharing projects with clients</li>
+                <li>Testing APIs and webhooks</li>
+                <li>Demonstrating unfinished projects</li>
+                <li>Remote debugging</li>
+                <li>Temporary public hosting</li>
+              </ul>
+
+              <h2>Important Notes</h2>
+              <ul>
+                <li>The public URL works only while the tunnel is running.</li>
+                <li>Closing the terminal will stop the tunnel.</li>
+                <li>
+                  For long-term hosting, you can connect the tunnel to a custom
+                  domain.
+                </li>
+              </ul>
+
+              <h2>Conclusion</h2>
+              <p>
+                Using <span class="kw">Cloudflare Tunnel</span> is one of the
+                easiest ways to share a localhost server with the internet. It
+                works on macOS, Windows, and Linux, making it a powerful tool
+                for developers who need to quickly share their local projects.
+              </p>
+              <p>
+                With just a few commands, you can securely expose your
+                development environment and collaborate more efficiently.
+              </p>
+            </div>
+
+            <div class="tags">
+              <span class="tag">Cloudflare</span>
+              <span class="tag">DevOps</span>
+              <span class="tag">Networking</span>
+              <span class="tag">Tutorial</span>
+              <span class="tag">Localhost</span>
+            </div>
+          </article>
+
+          <div class="sh" style="margin-top: 40px">
+            <span class="st">Other Stories</span>
+            <div class="sl"></div>
+          </div>
+          <div class="other-stories-scroll">
+            <article
+              class="os-card"
+              onclick="window.location.href = 'y-sorting-in-2d-games.html'"
+            >
+              <div class="os-header">
+                <span class="os-date">Dec 04, 2025</span>
+                <span class="os-title">Y-Sorting in 2D Games</span>
+              </div>
+              <div class="os-excerpt">
+                <p>
+                  In the 3D world, the graphics card uses a "Depth Buffer"
+                  (Z-buffer) to calculate which pixel is closest...
+                </p>
+              </div>
+              <div class="os-footer">
+                <div class="tags">
+                  <span class="tag">Game Dev</span>
+                  <span class="tag">2D Rendering</span>
+                </div>
+              </div>
+            </article>
+            <article
+              class="os-card"
+              onclick="
+                window.location.href = 'building-a-custom-react-renderer.html'
+              "
+            >
+              <div class="os-header">
+                <span class="os-date">Oct 22, 2025</span>
+                <span class="os-title">Building a Custom React Renderer</span>
+              </div>
+              <div class="os-excerpt">
+                <p>
+                  React's reconciliation algorithm is fascinating. But have you
+                  ever wondered if you could render to something...
+                </p>
+              </div>
+              <div class="os-footer">
+                <div class="tags">
+                  <span class="tag">React</span>
+                  <span class="tag">JavaScript</span>
+                </div>
+              </div>
+            </article>
+            <article
+              class="os-card"
+              onclick="
+                window.location.href =
+                  'understanding-crdts-for-distributed-systems.html'
+              "
+            >
+              <div class="os-header">
+                <span class="os-date">Sep 15, 2025</span>
+                <span class="os-title"
+                  >Understanding CRDTs for Distributed Systems</span
+                >
+              </div>
+              <div class="os-excerpt">
+                <p>
+                  Conflict-free Replicated Data Types (CRDTs) are the secret
+                  sauce behind modern collaborative applications...
+                </p>
+              </div>
+              <div class="os-footer">
+                <div class="tags">
+                  <span class="tag">Distributed Systems</span>
+                  <span class="tag">CRDT</span>
+                </div>
+              </div>
+            </article>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <a class="fab" href="mailto:wzullah.farhan@gmail.com">✉</a>
+
+    <script src="../data.js"></script>
+    <script src="../script.js"></script>
+  </body>
+</html>
