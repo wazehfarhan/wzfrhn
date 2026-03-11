@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Fuad Hasan</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Glassmorphism Top Navbar -->
+    <header class="glass-nav">
+      <div class="nav-container">
+        <div class="nav-brand">
+          <span class="brand-icon" id="nav-avatar"></span>
+        </div>
+        <nav class="nav-links">
+          <button class="nav-item active" data-tab="feed">Feed</button>
+          <button class="nav-item" data-tab="about">About</button>
+          <button class="nav-item" data-tab="projects">Projects</button>
+          <button class="nav-item" data-tab="resume">Resume</button>
+        </nav>
+        <div class="nav-socials">
+          <a
+            class="social-icon"
+            href="https://github.com/w2zfrhn"
+            target="_blank"
+            title="GitHub"
+            >⌨</a
+          >
+          <a
+            class="social-icon"
+            href="https://www.linkedin.com/in/w2zfrhn"
+            target="_blank"
+            title="LinkedIn"
+            >💼</a
+          >
+          <a
+            class="social-icon"
+            href="https://w2zfrhn.com"
+            target="_blank"
+            title="Website"
+            >🌐</a
+          >
+          <a
+            class="social-icon"
+            href="mailto:wzullah.farhan@gmail.com"
+            title="Email"
+            >✉</a
+          >
+        </div>
+      </div>
+    </header>
+
+    <!-- Mobile Menu Button -->
+    <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
+    <div class="overlay" id="overlay"></div>
+
+    <!-- Mobile Sidebar -->
+    <aside class="mobile-sidebar" id="mobileSidebar">
+      <div class="sidebar-header">
+        <div class="ava" id="mobile-avatar"></div>
+        <div class="name" id="mobile-name"></div>
+        <div class="tagline" id="mobile-tagline"></div>
+      </div>
+      <div class="badges" id="mobile-badges"></div>
+      <nav class="sidebar-nav">
+        <button class="nav-item active" data-tab="feed">📰 Feed</button>
+        <button class="nav-item" data-tab="about">👤 About</button>
+        <button class="nav-item" data-tab="projects">🚀 Projects</button>
+        <button class="nav-item" data-tab="resume">📄 Resume</button>
+      </nav>
+    </aside>
+
+    <div class="layout">
+      <main class="main">
+        <!-- Profile Header (Dynamic) -->
+        <div class="profile-header">
+          <div class="profile-avatar" id="profile-avatar"></div>
+          <div class="profile-info">
+            <h1 class="profile-name">
+              <span id="profile-name"></span><span class="accent">_</span>
+            </h1>
+            <p class="profile-tagline" id="profile-tagline"></p>
+            <div class="profile-badges" id="profile-badges"></div>
+          </div>
+        </div>
+
+        <!-- FEED -->
+        <section id="tab-feed" class="tab-content">
+          <!-- Latest Post Section -->
+          <div class="sh">
+            <span class="st">Latest Story</span>
+            <div class="sl"></div>
+          </div>
+          <div id="latest-post"></div>
+
+          <!-- Other Stories Section -->
+          <div class="sh" style="margin-top: 40px">
+            <span class="st">Other Stories</span>
+            <div class="sl"></div>
+          </div>
+          <div id="other-stories"></div>
+        </section>
+
+        <!-- ABOUT -->
+        <section id="tab-about" class="tab-content" style="display: none">
+          <div class="sh">
+            <span class="st">About Me</span>
+            <div class="sl"></div>
+          </div>
+          <div class="fc">
+            <div class="prose" id="about-content"></div>
+          </div>
+        </section>
+
+        <!-- PROJECTS -->
+        <section id="tab-projects" class="tab-content" style="display: none">
+          <div class="sh">
+            <span class="st">Projects</span>
+            <div class="sl"></div>
+          </div>
+          <div class="grid" id="projects-container"></div>
+        </section>
+
+        <!-- RESUME -->
+        <section id="tab-resume" class="tab-content" style="display: none">
+          <div class="sh">
+            <span class="st">Resume</span>
+            <div class="sl"></div>
+          </div>
+          <div class="rc">
+            <div class="rh">
+              <div>
+                <div
+                  style="font-size: 19px; font-weight: 800"
+                  id="resume-name"
+                ></div>
+                <div
+                  style="color: var(--muted); font-size: 13px; margin-top: 3px"
+                  id="resume-title"
+                ></div>
+              </div>
+              <a href="#" class="dlbtn">⬇ Download PDF</a>
+            </div>
+            <div style="border-top: 1px solid var(--border); padding-top: 18px">
+              <div
+                style="
+                  font-size: 11px;
+                  letter-spacing: 2px;
+                  text-transform: uppercase;
+                  color: var(--muted);
+                  font-weight: 700;
+                  margin-bottom: 14px;
+                "
+              >
+                Experience
+              </div>
+              <div class="exps" id="experience-container"></div>
+            </div>
+          </div>
+        </section>
+      </main>
+    </div>
+
+    <a class="fab" href="mailto:wzullah.farhan@gmail.com">✉</a>
+
+    <script src="data.js"></script>
+    <script src="script.js"></script>
+  </body>
+</html>

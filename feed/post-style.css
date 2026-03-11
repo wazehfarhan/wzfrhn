@@ -1,0 +1,94 @@
+/* ================================================
+   Individual Post Page Styles
+   ================================================ */
+.post-page {
+  background: var(--card);
+  border: 1px solid var(--border);
+  border-radius: 16px;
+  overflow: hidden;
+  margin-bottom: 26px;
+}
+
+.post-header {
+  padding: 32px;
+  border-bottom: 1px solid var(--border);
+  text-align: center;
+}
+
+.post-date {
+  font-size: 13px;
+  color: var(--muted);
+  display: block;
+  margin-bottom: 12px;
+}
+
+.post-title {
+  font-size: 28px;
+  font-weight: 800;
+  color: var(--text);
+  margin-bottom: 16px;
+  line-height: 1.4;
+}
+
+.post-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+}
+
+.post-content {
+  padding: 32px;
+  background: #fff;
+  margin: 0;
+  border-radius: 0;
+  color: #1a2a3a;
+  font-size: 16px;
+  line-height: 1.85;
+}
+
+.post-content p {
+  margin-bottom: 16px;
+}
+
+.post-content p:last-child {
+  margin-bottom: 0;
+}
+
+.post-content .kw {
+  font-family: "Courier New", monospace;
+  background: #ddeeff;
+  padding: 1px 7px;
+  border-radius: 4px;
+  font-size: 13px;
+  color: #1a5fbf;
+  font-weight: 700;
+}
+
+.post-footer {
+  padding: 24px 32px;
+  border-top: 1px solid var(--border);
+}
+
+.back-link {
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.back-link:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 768px) {
+  .post-header {
+    padding: 24px 20px;
+  }
+  .post-title {
+    font-size: 22px;
+  }
+  .post-content {
+    padding: 24px 20px;
+  }
+}
