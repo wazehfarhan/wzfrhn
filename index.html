@@ -13,70 +13,6 @@
     <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <!-- Glassmorphism Top Navbar -->
-    <header class="glass-nav">
-      <div class="nav-container">
-        <div class="nav-brand">
-          <span class="brand-icon" id="nav-avatar"></span>
-        </div>
-        <nav class="nav-links">
-          <button class="nav-item active" data-tab="feed">Feed</button>
-          <button class="nav-item" data-tab="about">About</button>
-          <button class="nav-item" data-tab="projects">Projects</button>
-          <button class="nav-item" data-tab="resume">Resume</button>
-        </nav>
-        <div class="nav-socials">
-          <a
-            class="social-icon"
-            href="https://github.com/w2zfrhn"
-            target="_blank"
-            title="GitHub"
-            >⌨</a
-          >
-          <a
-            class="social-icon"
-            href="https://www.linkedin.com/in/w2zfrhn"
-            target="_blank"
-            title="LinkedIn"
-            >💼</a
-          >
-          <a
-            class="social-icon"
-            href="https://w2zfrhn.com"
-            target="_blank"
-            title="Website"
-            >🌐</a
-          >
-          <a
-            class="social-icon"
-            href="mailto:wzullah.farhan@gmail.com"
-            title="Email"
-            >✉</a
-          >
-        </div>
-      </div>
-    </header>
-
-    <!-- Mobile Menu Button -->
-    <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
-    <div class="overlay" id="overlay"></div>
-
-    <!-- Mobile Sidebar -->
-    <aside class="mobile-sidebar" id="mobileSidebar">
-      <div class="sidebar-header">
-        <div class="ava" id="mobile-avatar"></div>
-        <div class="name" id="mobile-name"></div>
-        <div class="tagline" id="mobile-tagline"></div>
-      </div>
-      <div class="badges" id="mobile-badges"></div>
-      <nav class="sidebar-nav">
-        <button class="nav-item active" data-tab="feed">📰 Feed</button>
-        <button class="nav-item" data-tab="about">👤 About</button>
-        <button class="nav-item" data-tab="projects">🚀 Projects</button>
-        <button class="nav-item" data-tab="resume">📄 Resume</button>
-      </nav>
-    </aside>
-
     <div class="layout">
       <main class="main">
         <!-- Profile Header (Dynamic) -->
@@ -88,6 +24,13 @@
             </h1>
             <p class="profile-tagline" id="profile-tagline"></p>
             <div class="profile-badges" id="profile-badges"></div>
+            <!-- Navigation below badges -->
+            <nav class="profile-nav" id="profileNav">
+              <button class="nav-item active" data-tab="feed">Feed</button>
+              <button class="nav-item" data-tab="about">About</button>
+              <button class="nav-item" data-tab="projects">Projects</button>
+              <button class="nav-item" data-tab="resume">Resume</button>
+            </nav>
           </div>
         </div>
 

@@ -10,92 +10,6 @@
     <link rel="stylesheet" href="post-style.css" />
   </head>
   <body>
-    <header class="glass-nav">
-      <div class="nav-container">
-        <div class="nav-brand">
-          <span class="brand-icon">👨‍💻</span>
-        </div>
-        <nav class="nav-links">
-          <button class="nav-item active" data-tab="feed">Feed</button>
-          <button class="nav-item" data-tab="about">About</button>
-          <button class="nav-item" data-tab="projects">Projects</button>
-          <button class="nav-item" data-tab="resume">Resume</button>
-        </nav>
-        <div class="nav-socials">
-          <a
-            class="social-icon"
-            href="https://github.com/w2zfrhn"
-            target="_blank"
-            title="GitHub"
-            >⌨</a
-          >
-          <a
-            class="social-icon"
-            href="https://www.linkedin.com/in/w2zfrhn"
-            target="_blank"
-            title="LinkedIn"
-            >💼</a
-          >
-          <a
-            class="social-icon"
-            href="https://w2zfrhn.com"
-            target="_blank"
-            title="Website"
-            >🌐</a
-          >
-          <a
-            class="social-icon"
-            href="mailto:wzullah.farhan@gmail.com"
-            title="Email"
-            >✉</a
-          >
-        </div>
-      </div>
-    </header>
-
-    <button class="mobile-menu-btn" id="mobileMenuBtn">☰</button>
-    <div class="overlay" id="overlay"></div>
-
-    <aside class="mobile-sidebar" id="mobileSidebar">
-      <div class="sidebar-header">
-        <div class="ava">👨‍💻</div>
-        <div class="name">Kazi Md. Wazeh Ullah Farhan<span>_</span></div>
-        <div class="tagline">
-          Software Engineering 💻 • Full-Stack Web Development • AI/ML
-          Enthusiast
-        </div>
-      </div>
-      <div class="badges">
-        <span class="badge"
-          ><span class="dot" style="background: #a8b9cc"></span>C</span
-        >
-        <span class="badge"
-          ><span class="dot" style="background: #00599c"></span>C++</span
-        >
-        <span class="badge"
-          ><span class="dot" style="background: #ed8b00"></span>Java</span
-        >
-        <span class="badge"
-          ><span class="dot" style="background: #512bd4"></span>C#</span
-        >
-        <span class="badge"
-          ><span class="dot" style="background: #f7df1e"></span>JavaScript</span
-        >
-        <span class="badge"
-          ><span class="dot" style="background: #336791"></span>SQL</span
-        >
-        <span class="badge"
-          ><span class="dot" style="background: #ff9900"></span>AWS</span
-        >
-      </div>
-      <nav class="sidebar-nav">
-        <button class="nav-item active" data-tab="feed">📰 Feed</button>
-        <button class="nav-item" data-tab="about">👤 About</button>
-        <button class="nav-item" data-tab="projects">🚀 Projects</button>
-        <button class="nav-item" data-tab="resume">📄 Resume</button>
-      </nav>
-    </aside>
-
     <div class="layout">
       <main class="main">
         <div class="profile-header">
@@ -133,6 +47,13 @@
                 ><span class="dot" style="background: #ff9900"></span>AWS</span
               >
             </div>
+            <!-- Navigation below badges -->
+            <nav class="profile-nav" id="profileNav">
+              <a href="../index.html" class="nav-item">Feed</a>
+              <a href="../index.html#about" class="nav-item">About</a>
+              <a href="../index.html#projects" class="nav-item">Projects</a>
+              <a href="../index.html#resume" class="nav-item">Resume</a>
+            </nav>
           </div>
         </div>
 
@@ -251,5 +172,8 @@
     </div>
 
     <a class="fab" href="mailto:wzullah.farhan@gmail.com">✉</a>
+
+    <script src="../data.js"></script>
+    <script src="../script.js"></script>
   </body>
 </html>

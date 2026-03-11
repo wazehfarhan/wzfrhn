@@ -10,6 +10,7 @@ document.addEventListener("DOMContentLoaded", () => {
   loadExperience();
   initNavigation();
   initMobileMenu();
+  initStickyNavbar();
 });
 
 // ============================================
@@ -233,6 +234,14 @@ function showTabContent(targetTab, tabContents) {
     content.style.display =
       content.id === `tab-${targetTab}` ? "block" : "none";
   });
+
+  // Re-trigger typing animation when switching to feed tab
+  if (targetTab === "feed") {
+    const profileName = document.getElementById("profile-name");
+    if (profileName) {
+      typeWriter(profileName, bio.name, 80);
+    }
+  }
 }
 
 // ============================================
@@ -279,3 +288,23 @@ window.addEventListener("resize", () => {
     if (window.innerWidth > 768) closeMobileMenu();
   }, 250);
 });
+
+// ============================================
+// Sticky Navbar on Scroll
+// ============================================
+function initStickyNavbar() {
+  const profileNav = document.getElementById("profileNav");
+  const profileHeader = document.querySelector(".profile-header");
+
+  if (!profileNav || !profileHeader) return;
+
+  window.addEventListener("scroll", () => {
+    const profileBottom = profileHeader.offsetTop + profileHeader.offsetHeight;
+
+    if (window.scrollY > profileBottom - 50) {
+      profileNav.classList.add("sticky");
+    } else {
+      profileNav.classList.remove("sticky");
+    }
+  });
+}
